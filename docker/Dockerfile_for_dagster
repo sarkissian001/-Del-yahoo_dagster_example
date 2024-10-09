@@ -1,0 +1,14 @@
+FROM python:3.10-slim
+
+
+COPY requirements.txt /tmp/requirements.txt
+RUN grep 'dagster' /tmp/requirements.txt | xargs pip install
+
+# Set $DAGSTER_HOME and copy dagster instance and workspace YAML there
+ENV DAGSTER_HOME=/opt/dagster/dagster_home/
+
+RUN mkdir -p $DAGSTER_HOME
+
+COPY ./docker/dagster.yaml ./docker/workspace.yaml $DAGSTER_HOME
+
+WORKDIR $DAGSTER_HOME

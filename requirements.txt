@@ -1,0 +1,14 @@
+wcwidth==0.2.13
+dagster==1.8.10
+dagster-docker==0.24.10
+dagster-graphql==1.8.10
+dagster-pipes==1.8.10
+dagster-postgres==0.24.10
+dagster-webserver==1.8.10
+yfinance==0.2.44
+pandas==2.2.3
+python-dotenv==1.0.1
+psycopg2-binary==2.9.9
+pymongo==4.10.1
+requests==2.32.3
+beautifulsoup4==4.12.3
